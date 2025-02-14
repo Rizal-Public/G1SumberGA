@@ -1,0 +1,13 @@
+{
+    "name": "giveaway",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Reckordp",
+    "dependencies": {
+        "mongodb": "^6.13.0",
+        "server": "^1.0.41"
+    }
+}
