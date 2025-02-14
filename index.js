@@ -13,6 +13,9 @@ let client = new MongoClient(`mongodb+srv://Reckordp:${kunci}@keteranganumumga.p
     }
 )
 
+const api = require('server')
+const jalur = require('./restapi/jalur.js')
+
 async function run() {
     try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -21,15 +24,10 @@ async function run() {
     let db = client.db("pengguna");
     // db.collection("checkin").
     global.penggunaDB = db
+    await api({ port: 9055 }, jalur)
+    while(true) {}
     } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
     }
 }
-
-const api = require('server')
-const jalur = require('./restapi/jalur.js')
-
-run().catch(console.log).then(_ => {
-    api({ port: 9055 }, jalur)
-})
