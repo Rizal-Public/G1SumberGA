@@ -21,7 +21,8 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
-    let db = client.db("pengguna");
+    let db = client.db("Snailight");
+    console.log(db)
     // db.collection("checkin").
     global.penggunaDB = db
     await api({ port: 9055 }, jalur)
@@ -31,3 +32,5 @@ async function run() {
     await client.close();
     }
 }
+
+run().catch(console.log)
