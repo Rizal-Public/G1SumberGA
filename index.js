@@ -26,9 +26,10 @@ async function run() {
     await client.close();
     }
 }
-run().catch(console.log);
-
 
 const api = require('server')
 const jalur = require('./restapi/jalur.js')
-api({ port: 9055 }, jalur)
+
+run().catch(console.log).then(_ => {
+    api({ port: 9055 }, jalur)
+})
