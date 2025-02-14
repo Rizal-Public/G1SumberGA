@@ -19,7 +19,7 @@ async function run() {
     await client.connect();
     // Send a ping to confirm a successful connection
     let db = client.db("pengguna");
-    db.collection("checkin").
+    // db.collection("checkin").
     global.penggunaDB = db
     } finally {
     // Ensures that the client will close when you finish/error
