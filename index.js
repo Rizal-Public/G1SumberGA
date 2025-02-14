@@ -22,7 +22,6 @@ async function run() {
     await client.connect();
     // Send a ping to confirm a successful connection
     let db = client.db("Snailight");
-    console.log(db)
     // db.collection("checkin").
     global.penggunaDB = db
     await api({ port: 9055 }, jalur)
