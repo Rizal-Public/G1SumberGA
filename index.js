@@ -24,7 +24,9 @@ async function run() {
     let db = client.db("Snailight");
     // db.collection("checkin").
     global.penggunaDB = db
+    console.log("Database Snailight berhasil terhubung")
     await api({ port: 9055 }, jalur)
+    console.log("Server berhasil dinyalakan")
     while(true) {}
     } finally {
     // Ensures that the client will close when you finish/error
